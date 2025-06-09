@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Merc Boyz</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css" />
+  <script src="Assets/JS/main.js" defer></script>
+  <meta name="description" content="Contact Merc Boyz Pty Ltd for high-quality Mercedes-Benz repair and maintenance services in Germiston, South Africa.">
+  <meta name="keywords" content="Mercedes-Benz repair, car maintenance, Germiston, Merc Boyz">
+  <meta name="author" content="Merc Boyz Pty Ltd">
+  <meta property="og:title" content="Contact Us - Merc Boyz">
+  <meta property="og:description" content="Reach out to Merc Boyz for expert Mercedes-Benz repair and maintenance services.">
+  <meta property="og:image" content="Assets/Images/MercBoyzLogo.jpg">
+  <meta property="og:url" content="http://www.mercboyz.com/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>Contact Us</h1>
+      <img src="Assets/Images/MercBoyzLogo.jpg" alt="Merc Boyz Logo" class="logo">
+      <h2>Your Trusted Mercedes-Benz Specialist</h2>
+      <p>We’d love to hear from you! Reach out to us using the details below or fill out the contact form.</p>
+    </div>
+    
+    <nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h2>Get in Touch</h2>
+      <p>We’d love to hear from you! Reach out to us using the details below or fill out the contact form.</p>
+
+      <div class="contact-details">
+        <p><strong>Location:</strong> Germiston, South Africa</p>
+        <p><strong>Phone:</strong> +27 71 234 5678</p>
+        <p><strong>Email:</strong> <a href="mailto:info@mercboyz.co.za">info@mercboyz.co.za</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/27712345678">Chat with us</a></p>
+      </div>
+      
+      <h3>Contact Form</h3>
+      <p>If you have any questions or would like to book a service, please fill out the form below:</p>
+      <form action="/api/contact" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Merc Boyz Pty Ltd</p>
+  </footer>
+
+</body>
+</html>

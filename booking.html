@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Service - Merc Boyz</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css" />
+  <script src="Assets/JS/main.js" defer></script>
+  <meta name="description" content="Book your next Mercedes-Benz service appointment with Merc Boyz Pty Ltd in Germiston, South Africa.">
+  <meta name="keywords" content="Mercedes-Benz repair, car maintenance, Germiston, Merc Boyz, booking">
+  <meta name="author" content="Merc Boyz Pty Ltd">
+  <meta property="og:title" content="Book a Service - Merc Boyz">
+  <meta property="og:description" content="Schedule your next Mercedes-Benz service appointment with ease.">
+  <meta property="og:image" content="Assets/Images/MercBoyzLogo.jpg">
+  <meta property="og:url" content="http://www.mercboyz.com/booking.html">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>Book Your Service</h1>
+      <img src="Assets/Images/MercBoyzLogo.jpg" alt="Merc Boyz Logo" class="logo">
+      <h2>Your Trusted Mercedes-Benz Specialist</h2>
+      <p>Schedule your next service appointment with ease.</p>
+    </div>
+    <nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html" class="active">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Schedule Your Service</h2>
+      <p>Fill out the form below to book your appointment with us.</p>
+      <form id="bookingForm" action="/api/bookings" method="POST" autocomplete="on">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="e.g., +27 71 234 5678">
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="service">Service Type:</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option value="diagnostics">Diagnostics</option>
+          <option value="brakes">Brake Service</option>
+          <option value="transmission">Transmission</option>
+          <option value="oil-change">Oil Change</option>
+          <option value="ac-repair">Air Conditioning Repair</option>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Any specific issues or requests?"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="confirmation" class="confirmation" style="display:none;">
+        <h2>Thank You for Booking!</h2>
+        <p>Your appointment has been successfully scheduled. We will contact you shortly to confirm the details.</p>
+        <p>If you have any questions, feel free to reach out to us.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Merc Boyz Pty Ltd</p>
+  </footer>
+</body>
+</html>
