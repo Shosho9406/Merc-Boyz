@@ -75,10 +75,11 @@ header .social-icons a:hover {
 nav {
   background-color: #444;
   padding: 10px 0;
+  position: relative; /* Add this line */
 }
 
 .nav-links {
-  display: flex; 
+  display: none;
   justify-content: center;
   list-style: none;
   gap: 20px;
@@ -104,38 +105,37 @@ nav {
 
 
 .menu-toggle {
-  display: none; 
+  display: block;
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;   /* Smaller size */
   cursor: pointer;
-  position: absolute; 
-  top: 10px; 
-  right: 20px;
-  z-index: 10; 
+  position: fixed;
+  top: 10px;           /* Closer to the top */
+  right: 10px;         /* Closer to the right */
+  z-index: 1000;
+  padding: 4px 8px;    /* Small padding for easier tap/click */
 }
 
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none; 
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #444;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 9;
+    padding: 20px 0;
   }
-
-  .menu-toggle {
-    display: block; 
-    margin: 0 auto;
-  }
-
-  .nav-links.hidden {
-    display: none; 
-  }
-
-  .nav-links.visible {
-    display: flex; 
+  .nav-links.show {
+    display: flex !important;
   }
 }
 
